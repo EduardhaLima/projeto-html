@@ -1,9 +1,56 @@
-body{
-
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
+html {
+    /* Faz a rolagem ser suave ao clicar nos links do menu */
+    scroll-behavior: smooth;
 }
 
-article.nome{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    /* Fonte padrão (opcional, pois o Bootstrap já tem uma boa) */
+    font-family: sans-serif;
+}
+
+/* =========================================
+   SEÇÕES
+   ========================================= */
+/* Hero Section (A parte do "Olá") */
+.hero-section {
+    background-color: #f8f9fa; /* Cinza bem clarinho */
+    padding: 100px 0;          /* Espaço grande em cima e embaixo */
+    text-align: center;        /* Centraliza o texto */
+}
+
+/* Classe utilitária para dar espaço entre todas as seções */
+.espaco-seccao {
+    padding: 80px 0;
+}
+
+/* =========================================
+   CARDS (PROJETOS)
+   ========================================= */
+.card {
+    /* Suaviza a animação */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Remove a borda padrão feia */
+}
+
+/* Efeito ao passar o mouse no card */
+.card:hover {
+    transform: translateY(-5px); /* Sobe um pouquinho */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; /* Aumenta a sombra */
+}
+
+/* Garante que as imagens dos cards tenham o mesmo tamanho */
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Corta a imagem para caber sem esticar */
+}
+
+/* =========================================
+   NAVBAR (AJUSTES)
+   ========================================= */
+/* Garante que o conteúdo não fique escondido atrás do menu fixo */
+body {
+    padding-top: 56px; 
 }
